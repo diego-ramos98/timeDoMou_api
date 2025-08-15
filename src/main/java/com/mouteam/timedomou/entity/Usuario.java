@@ -18,7 +18,7 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "noem")
+    @Column(name = "nome")
     private String nome;
     @Column(name = "data_nascimento")
     private LocalDate dataNascimento;
