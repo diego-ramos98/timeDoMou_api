@@ -31,7 +31,7 @@ public class Usuario {
     @Column(name = "perfil_usuario")
     private Perfil perfilUsuario = Perfil.PERFIL_CLIENTE;
     @Column(name = "status_usuario")
-    private boolean statusUsuario;
+    private boolean statusUsuario = true;
     @Column(name = "data_inclusao")
     private LocalDate dataInclusao;
     @Column(name = "data_alteracao")
