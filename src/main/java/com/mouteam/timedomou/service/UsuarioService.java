@@ -35,7 +35,7 @@ public class UsuarioService {
     public Usuario deletaUsuario(Long id){
         Usuario usuario = buscaUsarioPorId(id);
 
-        usuario.setStatusUsuario(false);
+        usuario.setUsuarioAtivo(false);
 
         return usuario;
     }
