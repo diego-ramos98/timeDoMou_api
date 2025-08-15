@@ -24,9 +24,9 @@ public class Usuario {
     private LocalDate dataNascimento;
     @Column(name = "cpf")
     private String cpf;
-    @Column(name = "email")
+    @Column(name = "email",unique = true)
     private String email;
-    @Column(name = "senha")
+    @Column(name = "senha",unique = true)
     private String senha;
     @Column(name = "perfil_usuario")
     private Perfil perfilUsuario = Perfil.PERFIL_CLIENTE;
