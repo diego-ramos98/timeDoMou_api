@@ -11,4 +11,5 @@ public class UsuarioResponseDto {
     private String nome;
     private String email;
     private String usuarioAtivo;
+    private String perfilUsuario;
 }
