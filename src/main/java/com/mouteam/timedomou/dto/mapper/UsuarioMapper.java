@@ -21,7 +21,7 @@ public class UsuarioMapper {
         PropertyMap<Usuario,UsuarioResponseDto> props = new PropertyMap<Usuario, UsuarioResponseDto>() {
             @Override
             protected void configure() {
-                map().setUsuarioAtivo(perfil);
+                map().setPerfilUsuario(perfil);
             }
         };
 
