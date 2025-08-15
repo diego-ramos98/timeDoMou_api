@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/v1/usuarios")
@@ -27,13 +29,19 @@ public class UsuarioController {
     }
 
 
-    @GetMapping
-    public ResponseEntity<UsuarioResponseDto> buscaUsuarioPorId(Long id){
+    @GetMapping("/{id}")
+    public ResponseEntity<UsuarioResponseDto> buscaUsuarioPorId(@PathVariable Long id){
         Usuario usuario = usuarioService.buscaUsarioPorId(id);
 
         return ResponseEntity.status(HttpStatus.OK).body(UsuarioMapper.ToDto(usuario));
     }
 
+    @GetMapping
+    public ResponseEntity<List<UsuarioResponseDto>> buscaTodosUsuarios(){
+        List<Usuario> usuarios = usuarioService.buscaTodos();
+
+        return ResponseEntity.status(HttpStatus.OK).body(UsuarioMapper.ToListDto(usuarios));
+    }
 
 
 }
