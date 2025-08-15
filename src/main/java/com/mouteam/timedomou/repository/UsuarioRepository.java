@@ -1,4 +1,8 @@
 package com.mouteam.timedomou.repository;
 
-public interface UsuarioRepository {
+
+import com.mouteam.timedomou.entity.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
 }
