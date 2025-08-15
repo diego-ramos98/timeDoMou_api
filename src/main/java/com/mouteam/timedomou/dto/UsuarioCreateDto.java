@@ -1,4 +1,4 @@
-package com.mouteam.timedomou.dto.mapper;
+package com.mouteam.timedomou.dto;
 
 import lombok.*;
 
