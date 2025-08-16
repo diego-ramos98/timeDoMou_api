@@ -29,6 +29,7 @@ public class Usuario {
     @Column(name = "senha",unique = true)
     private String senha;
     @Column(name = "perfil_usuario")
+    @Enumerated(EnumType.STRING)
     private Perfil perfilUsuario = Perfil.PERFIL_CLIENTE;
     @Column(name = "usuario_ativo")
     private boolean usuarioAtivo = true;

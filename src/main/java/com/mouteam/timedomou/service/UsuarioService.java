@@ -52,6 +52,8 @@ public class UsuarioService {
             throw new RuntimeException("Senha incorreta.");
         }
 
+        usuario.setSenha(novaSenha);
+
         return usuario;
     }
 
