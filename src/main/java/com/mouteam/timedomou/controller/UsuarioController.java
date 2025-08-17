@@ -6,6 +6,7 @@ import com.mouteam.timedomou.dto.UsuarioResponseDto;
 import com.mouteam.timedomou.dto.mapper.UsuarioMapper;
 import com.mouteam.timedomou.entity.Usuario;
 import com.mouteam.timedomou.service.UsuarioService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -46,7 +47,7 @@ public class UsuarioController {
 
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Void> alteraSenha(@PathVariable Long id, @RequestBody UsuarioAlteracaoSenha dto){
+    public ResponseEntity<Void> alteraSenha(@Valid  @PathVariable Long id, @RequestBody UsuarioAlteracaoSenha dto){
         Usuario usuario = usuarioService.alteraSenha(id, dto.getSenhaAtual(), dto.getNovaSenha(), dto.getConfirmacaoSenha());
 
         return ResponseEntity.noContent().build();
